@@ -44,6 +44,20 @@ abstract class Book {
 			this.genre = genre;
 			borrowCheck = false;
 		}
+		//오버로딩
+		void Info() {
+			System.out.println("제목 : " + title);
+			System.out.println("저자 : " + author);
+			System.out.println("가격 : " + price + "원");
+			System.out.println("장르 : " + genre);
+			
+			if (borrowCheck) {
+				System.out.println("대출 중");
+			} else {
+				System.out.println("대출 가능");          
+			}
+		}
+		
 		void bookinfo() {
 			System.out.println("장르 : " + genre);
 		}
@@ -71,9 +85,9 @@ public class Library {
 		
 		for (int i=0; i< book.length; i++) {
 			book[i].Info();
-			book[i].bookinfo();
-			book[i].borrow();
-			book[i].borrow();
+			//book[i].bookinfo();
+			//book[i].borrow();
+			//book[i].borrow();
 			System.out.println("==========================");
 		}
 	}
